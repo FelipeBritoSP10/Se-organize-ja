@@ -1,5 +1,4 @@
-ORGANIZE JÁ
-O Organize Já é um aplicativo de gerenciamento de tarefas que ajuda você a organizar seu dia a dia de maneira eficiente. 
+O ORGANIZE JÁ é um aplicativo de gerenciamento de tarefas que ajuda você a organizar seu dia a dia de maneira eficiente. 
 Com uma interface amigável, você pode adicionar, editar e apagar tarefas com confirmações para 
 garantir o controle total sobre suas atividades.
 
