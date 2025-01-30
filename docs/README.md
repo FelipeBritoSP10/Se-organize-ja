@@ -66,6 +66,4 @@ Clique duas vezes nele ou arraste para um navegador (Google Chrome, Firefox, Edg
 🚀 Teste a Aplicação
 Para testar a aplicação Organize Já, clique no link abaixo e explore todas as funcionalidades disponíveis:
 
-Teste o Organize Já aqui!
-
-
+https://organize-ja.vercel.app/
