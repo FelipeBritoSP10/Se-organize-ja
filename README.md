@@ -39,5 +39,16 @@ O **Organize Já** foi desenvolvido utilizando as seguintes tecnologias:
 - **HTML5** - Estrutura da aplicação.  
 - **CSS3** - Estilização e responsividade.  
 - **Bootstrap 5** - Framework CSS para layout moderno e responsivo.  
-- **JavaScript (ES6+)** - Implementação das funcionalidades interativas. 
+- **JavaScript (ES6+)** - Implementação das funcionalidades interativas.
 
+## 🛠️ Como executar o projeto  
+
+Para executar o **Organize Já** em seu ambiente local, siga os passos abaixo:  
+
+### 📥 1. Clone o Repositório  
+
+Abra o terminal ou prompt de comando e digite:  
+
+```bash
+git clone https://github.com/FelipeBritoSP10/Se-organize-ja.git
+cd Se-organize-ja ```
