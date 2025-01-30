@@ -8,29 +8,46 @@
             <!-- ICONS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
             <!-- PASTA CSS-->
-<link rel="stylesheet" href="./estilo.css">
+<link rel="stylesheet" href="./css/estilo.css">
 <title>Organize já</title>
 </head>
 <body>
+
+<!-- Container principal que mantém o layout organizado -->
 <div class="container mt-5">
+
+<!-- Linha para a organização dos elementos no layout -->
 <div class="row">
+
+<!-- Coluna com espaçamento para centralizar o conteúdo -->
 <div class="col-md-6 offset-md-3">
+
+<!-- Contêiner das tarefas -->
 <div class="task-list-container">
 <h1 class="task-list-title">Organize Já</h1>
+
+<!-- Campo de entrada para adicionar novas tarefas -->
 <div class="input-group mb-3">
 <input type="text" id="taskInput" class="form-control" placeholder="Adicione uma nova tarefa..." aria-label="Nova tarefa" aria-describedby="addButton">
 <div class="input-group-append">
+
+<!-- Botão para adicionar tarefa -->
 <button class="btn btn-primary" id="addButton">
     Adicionar
 </button>
 </div>
 </div>
-<ul class="list-group" id="taskList"></ul>
+
+<!-- Lista das tarefas adicionadas -->
+<ul class="list-group" id="taskList">
+</ul>
+
 </div>
 </div>
 </div>
 </div>
 
+<!-- Modal de confirmação para exclusão de tarefas -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
@@ -44,6 +61,7 @@
 <b>Tem certeza de que deseja excluir esta tarefa?</b>
 </div>
 <div class="modal-footer">
+<!-- Botões para cancelar ou confirmar a exclusão -->
 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 <button type="button" class="btn btn-danger" id="confirmDeleteButton">Excluir</button>
 </div>
@@ -51,9 +69,12 @@
 </div>
 </div>
 
+ <!-- Scripts necessários para o funcionamento do Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="./moviment.js"></script>
+
+<!-- Link para o script JavaScript customizado para manipulação de tarefas -->
+<script src="./js/moviment.js"></script>
 </body>
 </html>
