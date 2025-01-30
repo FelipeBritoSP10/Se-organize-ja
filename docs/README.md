@@ -63,7 +63,12 @@ Localize o arquivo index.html dentro da pasta do projeto.
 Clique duas vezes nele ou arraste para um navegador (Google Chrome, Firefox, Edge, etc.).
 
 
-🚀 Teste a Aplicação
+# 🚀 Teste a Aplicação
+# Onde você pode utilizar?
+- No trabalho: Organize suas atividades profissionais e acompanhe prazos e entregas.
+- Nos estudos: Gerencie suas tarefas acadêmicas, como tarefas de casa, exames e prazos de entrega.
+- No dia a dia: Para qualquer tipo de tarefa pessoal, desde a organização de compras até a criação de listas de afazeres.
+  
 Para testar a aplicação Organize Já, clique no link abaixo e explore todas as funcionalidades disponíveis:
 
 https://organize-ja.vercel.app/
