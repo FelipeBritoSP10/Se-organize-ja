@@ -17,7 +17,6 @@ Este projeto tem como objetivo fornecer uma solução simples e eficaz para a or
 - Criem novas tarefas com informações personalizadas.  
 - Atualizem tarefas existentes conforme necessário.  
 - Excluam tarefas com confirmação para evitar exclusões acidentais.  
-- Salvem as tarefas no armazenamento local para que persistam mesmo após recarregar a página.  
 - Utilizem o sistema em qualquer dispositivo, pois é totalmente responsivo.  
 
 ## 📱 Responsividade
