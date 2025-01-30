@@ -41,4 +41,3 @@ O **Organize Já** foi desenvolvido utilizando as seguintes tecnologias:
 - **Bootstrap 5** - Framework CSS para layout moderno e responsivo.  
 - **JavaScript (ES6+)** - Implementação das funcionalidades interativas. 
 
-## Acesse o Organize Já aqui:**https://organize-ja.vercel.app/
