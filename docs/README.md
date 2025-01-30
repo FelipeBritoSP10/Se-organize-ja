@@ -55,7 +55,7 @@ git clone https://github.com/FelipeBritoSP10/Se-organize-ja.git
 cd Se-organize-ja
 ```
 
-🌐 2. Abra no Navegador
+### 🌐 2. Abra no Navegador
 
 Após clonar o repositório e acessar o diretório, basta abrir o arquivo index.html no seu navegador:
 
