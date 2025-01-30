@@ -61,4 +61,11 @@ Após clonar o repositório e acessar o diretório, basta abrir o arquivo index.
 
 Localize o arquivo index.html dentro da pasta do projeto.
 Clique duas vezes nele ou arraste para um navegador (Google Chrome, Firefox, Edge, etc.).
-Agora você pode começar a usar o Organize Já!
+
+
+🚀 Teste a Aplicação
+Para testar a aplicação Organize Já, clique no link abaixo e explore todas as funcionalidades disponíveis:
+
+Teste o Organize Já aqui!
+
+
