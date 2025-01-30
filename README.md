@@ -20,7 +20,8 @@ Este projeto tem como objetivo fornecer uma solução simples e eficaz para a or
 - Salvem as tarefas no armazenamento local para que persistam mesmo após recarregar a página.  
 - Utilizem o sistema em qualquer dispositivo, pois é totalmente responsivo.  
 
----
+## 📱 Responsividade
+O Organize Já foi desenvolvido para ser mobile-first. Ou seja, a interface foi otimizada primeiramente para dispositivos móveis e se adapta perfeitamente a tablets e desktops. Não importa o dispositivo, a experiência será consistente e amigável.
 
 ## 🚀 Funcionalidades  
 
@@ -52,3 +53,12 @@ Abra o terminal ou prompt de comando e digite:
 ```bash
 git clone https://github.com/FelipeBritoSP10/Se-organize-ja.git
 cd Se-organize-ja
+```
+
+🌐 2. Abra no Navegador
+
+Após clonar o repositório e acessar o diretório, basta abrir o arquivo index.html no seu navegador:
+
+Localize o arquivo index.html dentro da pasta do projeto.
+Clique duas vezes nele ou arraste para um navegador (Google Chrome, Firefox, Edge, etc.).
+Agora você pode começar a usar o Organize Já!
