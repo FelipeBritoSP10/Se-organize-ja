@@ -32,7 +32,7 @@ O Organize Já foi desenvolvido para ser mobile-first. Ou seja, a interface foi 
 - **🎨 Interface Intuitiva**: Desenvolvida com Bootstrap para uma experiência amigável e moderna.
 
 
-## 🎨 Tecnologias Utilizadas  
+## 💻 Tecnologias Utilizadas  
 
 O **Organize Já** foi desenvolvido utilizando as seguintes tecnologias:  
 
