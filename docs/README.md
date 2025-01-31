@@ -24,7 +24,7 @@ O Organize Já foi desenvolvido para ser mobile-first. Ou seja, a interface foi 
 
 ## 🚀 Funcionalidades  
 
-- **📌 Adicionar Tarefas**: Permite criar novas tarefas com título e descrição.  
+- **➕ Adicionar Tarefas**: Permite criar novas tarefas com título e descrição.  
 - **📝 Editar Tarefas**: As tarefas podem ser editadas a qualquer momento para atualizações.  
 - **🗑️ Excluir Tarefas**: Possui uma opção de remoção com confirmação para evitar exclusões acidentais.  
 - **💾 Salvar Tarefas**: O sistema utiliza o armazenamento local do navegador para manter as tarefas salvas mesmo após o usuário fechar o aplicativo.  
