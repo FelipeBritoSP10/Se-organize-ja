@@ -51,6 +51,8 @@ Abra o terminal ou prompt de comando e digite:
 
 ```bash
 git clone https://github.com/FelipeBritoSP10/Se-organize-ja.git
+```
+```bash
 cd Se-organize-ja
 ```
 
