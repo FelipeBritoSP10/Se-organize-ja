@@ -1,3 +1,4 @@
+// Tudo sera executado assim que a pagina for carregdo
 document.addEventListener('DOMContentLoaded', () => {
 
     // Variáveis para os elementos da página
