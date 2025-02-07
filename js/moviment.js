@@ -1,43 +1,49 @@
+// Tudo sera executado assim que a pagina for carregdo
 document.addEventListener('DOMContentLoaded', () => {
+
     // Variáveis para os elementos da página
-    const taskInput = document.getElementById('taskInput');  // Campo de entrada da tarefa
-    const addButton = document.getElementById('addButton');  // Botão de adicionar tarefa
-    const taskList = document.getElementById('taskList');  // Lista de tarefas
-    const confirmDeleteButton = document.getElementById('confirmDeleteButton');  // Botão de confirmação de exclusão
-    let taskToDelete = null;  // Tarefa a ser excluída
+    const taskInput = document.getElementById('taskInput');
+    const addButton = document.getElementById('addButton');
+    const taskList = document.getElementById('taskList');
+    const confirmDeleteButton = document.getElementById('confirmDeleteButton');
+    let taskToDelete = null;
+
+    // Carrega as tarefas do localStorage ao iniciar a página
+    loadTasks();
 
     // Adiciona evento de clique no botão para adicionar tarefa
-    addButton.addEventListener('click', addTask);
-    // Permite adicionar tarefa pressionando Enter
+    addButton.addEventListener('click', () => addTask());
     taskInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            addTask();
-        }
+        if (e.key === 'Enter') addTask();
     });
 
     // Confirma a exclusão da tarefa
     confirmDeleteButton.addEventListener('click', () => {
         if (taskToDelete) {
-            taskList.removeChild(taskToDelete);  // Remove a tarefa
-            $('#confirmDeleteModal').modal('hide');  // Fecha o modal
+            taskList.removeChild(taskToDelete);
+            removeTaskFromStorage(taskToDelete.querySelector('.task-text').textContent);
+            $('#confirmDeleteModal').modal('hide');
         }
     });
 
     // Função para adicionar uma nova tarefa
-    function addTask() {
-        const taskText = taskInput.value.trim();  // Texto da tarefa
-        if (taskText === '') return;  // Não adiciona se o campo estiver vazio
+    function addTask(taskText = null) {
+        if (!taskText) {
+            taskText = taskInput.value.trim();
+            if (taskText === '') return;
+            saveTaskToStorage(taskText);
+        }
 
-        // Criação de um novo item de lista (li)
+        // Criando um novo item de lista
         const li = document.createElement('li');
         li.className = 'list-group-item task-list-item';
 
-        // Criação do texto da tarefa
+        // Criando o texto da tarefa
         const span = document.createElement('span');
         span.className = 'task-text';
         span.textContent = taskText;
 
-        // Campo de edição da tarefa
+        // Campo de edição
         const editInput = document.createElement('input');
         editInput.className = 'edit-input form-control';
         editInput.type = 'text';
@@ -48,19 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
         editButton.className = 'icon-button';
         editButton.innerHTML = '<i class="fas fa-edit"></i>';
         editButton.addEventListener('click', () => {
-            li.classList.toggle('editing');  // Alterna o modo de edição
+            li.classList.toggle('editing');
             if (li.classList.contains('editing')) {
-                editInput.focus();  // Foca no campo de edição
+                editInput.focus();
             }
         });
 
-        // Botão de salvar após edição
+        // Botão de salvar edição
         const saveButton = document.createElement('button');
         saveButton.className = 'icon-button save-button';
         saveButton.innerHTML = '<i class="fas fa-save"></i>';
         saveButton.addEventListener('click', () => {
-            span.textContent = editInput.value;  // Atualiza o texto da tarefa
-            li.classList.remove('editing');  // Sai do modo de edição
+            span.textContent = editInput.value;
+            updateTaskInStorage(taskText, editInput.value);
+            li.classList.remove('editing');
         });
 
         // Botão de remoção
@@ -68,24 +75,54 @@ document.addEventListener('DOMContentLoaded', () => {
         removeButton.className = 'icon-button';
         removeButton.innerHTML = '<i class="fas fa-trash"></i>';
         removeButton.addEventListener('click', () => {
-            taskToDelete = li;  // Define a tarefa para exclusão
-            $('#confirmDeleteModal').modal('show');  // Exibe o modal de confirmação
+            taskToDelete = li;
+            $('#confirmDeleteModal').modal('show');
         });
 
-        // Contêiner para os ícones de edição e exclusão
+        // Contêiner de botões
         const iconContainer = document.createElement('div');
         iconContainer.className = 'icon-container';
         iconContainer.appendChild(editButton);
         iconContainer.appendChild(saveButton);
         iconContainer.appendChild(removeButton);
 
-        // Adiciona os elementos criados ao item de lista
+        // Montando o item da lista
         li.appendChild(span);
         li.appendChild(editInput);
         li.appendChild(iconContainer);
         taskList.appendChild(li);
 
-        // Limpa o campo de entrada após adicionar a tarefa
+        // Limpa o campo de entrada após adicionar
         taskInput.value = '';
+    }
+
+    // Função para carregar tarefas do localStorage
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.forEach(addTask);
+    }
+
+    // Função para salvar tarefa no localStorage
+    function saveTaskToStorage(taskText) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.push(taskText);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    // Função para remover tarefa do localStorage
+    function removeTaskFromStorage(taskText) {
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks = tasks.filter(task => task !== taskText);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    // Função para atualizar tarefa no localStorage
+    function updateTaskInStorage(oldText, newText) {
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const index = tasks.indexOf(oldText);
+        if (index !== -1) {
+            tasks[index] = newText;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
     }
 });
